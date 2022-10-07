@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    
+    <aside class="aside" id="search">
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <h3>Search for a City:</h3>
+                <br />
+                <form id="search-form">
+                  <div class="search-group row">
+                    <div class="col">
+                      <input type="text" class="search-control" id="city-name" />
+                    </div>
+                  </div>
+                  <button type="submit" value="Submit" class="btn btn-info">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Recent Cities:</h3>
+                    <br />
+                    <ul class="list-group" id="city-list"></ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    
+    <main>
+        <section id="current">
+            <p>(Current Weather Here)</p>
+        </section>
+        <section id="forecast">
+            <p>(5-Day Forecast Here)</p>
+        </section>
+    </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
