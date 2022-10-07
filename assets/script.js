@@ -16,9 +16,12 @@ var cityListEl = $('#city-list');
 var index = 0;
 
 $(document).ready(function () {
-    var loadRecent = localStorage.getItem("City");
-    alert(loadRecent);
-    printSearch(loadRecent);
+    var latestIndex = localStorage.getItem("latestIndex");
+    index = latestIndex+1;
+    for(var i=0; i<latestIndex; i++){
+        var loadRecent = localStorage.getItem("City"+i);
+        printSearch(loadRecent);
+    }
 });
 
 var printSearch = function (name) {
@@ -34,7 +37,9 @@ var handleFormSubmit = function (event) {
   if (!nameInput) {
     return;
   }
-  localStorage.setItem("City"+i, nameInput);
+  localStorage.setItem("City"+index, nameInput);
+  index++;
+  localStorage.setItem("latestIndex", index);
   printSearch(nameInput);
   nameInputEl.val('');
 };
