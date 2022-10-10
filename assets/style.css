@@ -15,11 +15,6 @@
     src: url(UrbanJungleDEMO.otf);
 }
 
-@font-face {
-    font-family: mine3;
-    src: url(Lightning_Strike.ttf);
-}
-
 body {
     padding-top: 25px;
 }
@@ -68,8 +63,9 @@ input {
     height: 40px;
 }
 
-li {
+#list-group-item {
     font-size: 20px;
+    background-color: rgb(142, 199, 255);
     border: 1px solid black;
     box-shadow: 2px 2px 2px black;
 }
