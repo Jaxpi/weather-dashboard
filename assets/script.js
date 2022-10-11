@@ -85,35 +85,35 @@ var handleFormSubmit = function (event) {
       var forecastDate1 = new Date(data.list[1].dt_txt);
       document.querySelector("#five-date1").innerHTML = forecastDate1.toString().substring(0,10);
       document.querySelector("#five-conditions1").setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + "@2x.png");
-      document.querySelector("#five-temp1").textContent = "Temp: " + k2f(data.list[1].main.temp);
+      document.querySelector("#five-temp1").textContent = "Temp: " + k2f(data.list[1].main.temp_max);
       document.querySelector("#five-humidity1").textContent = "Humidity: " + data.list[1].main.humidity;
       document.querySelector("#five-wind1").textContent = "Wind Speed: " + data.list[1].wind.speed;
 
       var forecastDate2 = new Date(data.list[9].dt_txt);
       document.querySelector("#five-date2").innerHTML = forecastDate2.toString().substring(0,10);
       document.querySelector("#five-conditions2").setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[9].weather[0].icon + "@2x.png");
-      document.querySelector("#five-temp2").textContent = "Temp: " + k2f(data.list[9].main.temp);
+      document.querySelector("#five-temp2").textContent = "Temp: " + k2f(data.list[9].main.temp_max);
       document.querySelector("#five-humidity2").textContent = "Humidity: " + data.list[9].main.humidity;
       document.querySelector("#five-wind2").textContent = "Wind Speed: " + data.list[9].wind.speed;
 
       var forecastDate3 = new Date(data.list[17].dt_txt);
       document.querySelector("#five-date3").innerHTML = forecastDate3.toString().substring(0,10);
       document.querySelector("#five-conditions3").setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[17].weather[0].icon + "@2x.png");
-      document.querySelector("#five-temp3").textContent = "Temp: " + k2f(data.list[17].main.temp);
+      document.querySelector("#five-temp3").textContent = "Temp: " + k2f(data.list[17].main.temp_max);
       document.querySelector("#five-humidity3").textContent = "Humidity: " + data.list[17].main.humidity;
       document.querySelector("#five-wind3").textContent = "Wind Speed: " + data.list[17].wind.speed;
 
       var forecastDate4 = new Date(data.list[25].dt_txt);
       document.querySelector("#five-date4").innerHTML = forecastDate4.toString().substring(0,10);
       document.querySelector("#five-conditions4").setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[25].weather[0].icon + "@2x.png");
-      document.querySelector("#five-temp4").textContent = "Temp: " + k2f(data.list[25].main.temp);
+      document.querySelector("#five-temp4").textContent = "Temp: " + k2f(data.list[25].main.temp_max);
       document.querySelector("#five-humidity4").textContent = "Humidity: " + data.list[25].main.humidity;
       document.querySelector("#five-wind4").textContent = "Wind Speed: " + data.list[25].wind.speed;
 
       var forecastDate5 = new Date(data.list[33].dt_txt);
       document.querySelector("#five-date5").innerHTML = forecastDate5.toString().substring(0,10);
       document.querySelector("#five-conditions5").setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[33].weather[0].icon + "@2x.png");
-      document.querySelector("#five-temp5").textContent = "Temp: " + k2f(data.list[33].main.temp);
+      document.querySelector("#five-temp5").textContent = "Temp: " + k2f(data.list[33].main.temp_max);
       document.querySelector("#five-humidity5").textContent = "Humidity: " + data.list[33].main.humidity;
       document.querySelector("#five-wind5").textContent = "Wind Speed: " + data.list[33].wind.speed;
     })
