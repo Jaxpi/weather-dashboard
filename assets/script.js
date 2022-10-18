@@ -1,3 +1,5 @@
+//Global Variables
+
 var partQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 var queryURL;
 var formEl = $('#search-form');
@@ -6,12 +8,16 @@ var cityListEl = $('#city-list');
 var index = 0;
 var city;
 
+//When page loads - retrieve any locally stored data
+
 $(document).ready(function () {
   var cityArray = JSON.parse(localStorage.getItem("cityList"));
   cityArray.forEach(city =>{
     printSearch(city);
   })
 });
+
+//Create buttons for each city and put in city list
 
 var printSearch = function (name) {
   var listEl = $('<button>');
@@ -20,6 +26,8 @@ var printSearch = function (name) {
   listEl.attr('id', 'list-group-item');
   listEl.appendTo(cityListEl);
 };
+
+//When a city name is inputted (and is valid) then apply it to the API string for search, set it to local storage, and display data for current weather
 
 var handleFormSubmit = function (event) {
   event.preventDefault();
@@ -57,6 +65,8 @@ var handleFormSubmit = function (event) {
     }
   };
   
+//Use the coordinates from the previous data query to retrieve the 5-day forecast data
+
   nameInputEl.val('');
   var forecastQueryURL;
   fetch(queryURL)
@@ -120,9 +130,13 @@ var handleFormSubmit = function (event) {
   })
 };
 
+//Conversion for temperature from Kelvin to Fahrenheit
+
 function k2f(K) {
   return Math.floor((K - 273.15) * 1.8 + 32);
 }
+
+//If clicked or submitted, or if clicked on recent searches buttons, run function again
 
 formEl.on('submit', handleFormSubmit);
 
