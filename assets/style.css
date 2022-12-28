@@ -79,16 +79,29 @@ input {
 #current {
     display: flex;
     flex-flow: column;
-    /* justify-content: space-between; */
+    justify-content: center;
     align-items: flex-start;
     height: min-content;
     min-height: 200px;
+    width: fit-content;
     padding: 10px;
     margin-bottom: 10px;
     border: 2px solid black;
     box-shadow: 2px 2px 2px black;
     font-weight: bold;
     font-size: 28px;
+}
+
+#current-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#label {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
 }
 
 #current-name {
@@ -99,12 +112,12 @@ input {
 #current-data {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-size: 18px;
 }
 
-#current-conditions, #current-temp, #current-humidity, #current-wind {
+#current-temp, #current-humidity, #current-wind {
     margin: 10px;
 }
 
@@ -124,20 +137,27 @@ input {
 
 #day1, #day2, #day3, #day4, #day5 {
     width: 180px;
-    height: 250px;
+    height: 210px;
     margin: 5px 2px;
     padding: 5px;
-    background-image: linear-gradient(rgb(64, 77, 255), white);
+    background-image: linear-gradient(rgb(190, 190, 190), white);
     border-radius: 5px;
     border: 1px solid black;
     box-shadow: 2px 2px 2px black;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
+    /* font-weight: bold; */
 }
 
 @media screen and (max-width: 600px) {
     .aside, main {
       width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #current-data {
+      flex-direction: column;
+      align-items: flex-start;
     }
 }
 
