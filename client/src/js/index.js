@@ -1,3 +1,15 @@
+import { Workbox } from 'workbox-window';
+import '../css/style.css';
+
+// Check if service workers are supported
+if ('serviceWorker' in navigator) {
+  // Register workbox service worker
+  const workboxSW = new Workbox('./sw.js');
+  workboxSW.register();
+} else {
+  console.error('Service workers are not supported in this browser.');
+}
+
 //Global Variables
 
 var partQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -143,12 +155,3 @@ formEl.on('submit', handleFormSubmit);
 cityListEl.on("click", function(event){
   handleFormSubmit(event);
 });
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("/serviceWorker.js")
-      .then(res => console.log("service worker registered"))
-      .catch(err => console.log("service worker not registered", err))
-  })
-}
