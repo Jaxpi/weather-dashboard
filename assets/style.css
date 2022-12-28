@@ -78,9 +78,9 @@ input {
 
 #current {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-flow: column;
+    /* justify-content: space-between; */
+    align-items: flex-start;
     height: min-content;
     min-height: 200px;
     padding: 10px;
@@ -94,6 +94,18 @@ input {
 #current-name {
     font-weight: bold;
     font-size: 30px;
+}
+
+#current-data {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+#current-conditions, #current-temp, #current-humidity, #current-wind {
+    margin: 10px;
 }
 
 .forecast-title {
