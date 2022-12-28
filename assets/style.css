@@ -27,7 +27,7 @@ header {
 
 h1 {
     font-size: 8vw;
-    font-size: ;
+    /* font-size: ; */
     font-family: mine1, Arial, Helvetica, sans-serif;
 }
 
@@ -37,6 +37,8 @@ main {
     height: auto;
     min-height: 800px;
     padding: 10px;
+    background-image: url("./images/back1.png");
+    background-repeat: repeat;
 }
 
 aside {
@@ -90,6 +92,7 @@ input {
     box-shadow: 2px 2px 2px black;
     font-weight: bold;
     font-size: 28px;
+    background: white;
 }
 
 #current-top {

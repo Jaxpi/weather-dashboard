@@ -1,7 +1,7 @@
 # weather-dashboard
 
 https://jaxpi.github.io/weather-dashboard/
-<br><img src="assets/mainscreenshot.jpg" style="width:300px; height auto;">
+<br><img src="assets/images/mainscreenshot.jpg" style="width:300px; height auto;">
 
 
 ## Description
