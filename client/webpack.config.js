@@ -39,13 +39,13 @@ module.exports = () => {
         publicPath: "/",
         fingerprints: true,
         inject: true,
-        // icons: [
-        //   {
-        //     src: path.resolve("src/images/logo.png"),
-        //     type: "image/png",
-        //     sizes: [36, 48, 72, 96, 144, 192, 512],
-        //   },
-        // ],
+        icons: [
+          {
+            src: path.resolve("src/images/logo.png"),
+            type: "image/png",
+            sizes: [36, 48, 72, 96, 144, 192, 512],
+          },
+        ],
       }),
     ],
     // resolve: {
